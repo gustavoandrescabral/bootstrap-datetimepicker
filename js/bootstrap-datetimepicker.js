@@ -849,9 +849,9 @@
 			e.stopPropagation();
 			e.preventDefault();
 			var target = $(e.target).closest('span, td, th, legend');
-			if (target.is('.' + this.icontype)) {
-				target = $(target).parent().closest('span, td, th, legend');
-			}
+			if (target.is('.glyphicon')) {
+        target = $(target).parent().closest('span, td, th, legend');
+      }
 			if (target.length == 1) {
 				if (target.is('.disabled')) {
 					this.element.trigger({
